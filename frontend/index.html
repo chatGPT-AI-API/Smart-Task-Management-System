@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能任务管理系统</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- 侧边导航 -->
+        <nav class="mdc-drawer">
+            <div class="mdc-drawer__header">
+                <h3 class="mdc-typography--headline6">项目空间</h3>
+            </div>
+            <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#">
+                        <span class="mdc-list-item__text">我的看板</span>
+                    </a>
+                    <div class="mdc-list-divider"></div>
+                    <h6 class="mdc-list-group__subheader">团队项目</h6>
+                    <nav id="project-list" class="mdc-list"></nav>
+                </nav>
+            </div>
+        </nav>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <header class="mdc-top-app-bar">
+                <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section">
+                        <button class="mdc-icon-button material-icons">menu</button>
+                        <span class="mdc-top-app-bar__title">敏捷开发看板</span>
+                    </section>
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                        <button id="theme-toggle" class="mdc-icon-button material-icons">dark_mode</button>
+                    </section>
+                </div>
+            </header>
+            <div class="auth-buttons">
+                <button class="mdc-button mdc-button--raised" onclick="location.href='auth.html?action=login'">
+                    <span class="mdc-button__label">登录</span>
+                </button>
+                <button class="mdc-button mdc-button--raised" onclick="location.href='auth.html?action=signup'">
+                    <span class="mdc-button__label">注册</span>
+                </button>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- 动态看板内容通过JS生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 任务详情模态框 -->
+    <div class="mdc-dialog">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface">
+                <!-- 动态内容 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

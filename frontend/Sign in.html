@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 任务管理系统</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="mdc-card auth-card">
+            <div class="auth-tabs">
+                <button class="mdc-tab mdc-tab--active" data-target="login">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">登录</span>
+                    </span>
+                </button>
+            </div>
+
+            <div id="login" class="auth-form active">
+                <div class="mdc-text-field mdc-text-field--outlined">
+                    <input type="text" id="login-username" class="mdc-text-field__input" required>
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="login-username" class="mdc-floating-label">用户名</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-text-field--outlined">
+                    <input type="password" id="login-password" class="mdc-text-field__input" required>
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label for="login-password" class="mdc-floating-label">密码</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <button class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__label">登录</span>
+                </button>
+            </div>
+            <div id="error-message" style="color: red;"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
